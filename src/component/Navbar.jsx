@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaSearch, FaUser, FaShoppingCart } from 'react-icons/fa';
+import { SignedOut,SignedIn, SignInButton, UserButton } from '@clerk/clerk-react'
 
 const Navbar = () => {
   return (
@@ -18,7 +19,13 @@ const Navbar = () => {
 
       <div className="flex items-center space-x-5">
         <FaSearch className="text-xl cursor-pointer hover:text-yellow-400" title="Search" />
-        <FaUser className="text-xl cursor-pointer hover:text-yellow-400" title="User Login" />
+        <FaUser className="text-xl cursor-pointer hover:text-yellow-400" title="User Login" />      
+        <SignedOut>
+        <SignInButton />
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
         <FaShoppingCart className="text-xl cursor-pointer hover:text-yellow-400" title="Add to Cart" />
       </div>
     </nav>
