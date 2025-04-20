@@ -14,11 +14,7 @@ function App() {
         {/* Home Route */}
         <Route path="/" element={<Container/>} />
 
-        {/* Login Route */}
-        {/* <Route path="/login" element={<Login />} /> */}
-
-        {/* SignIn Route */}
-    
+      
       </Routes>
     </>
   
